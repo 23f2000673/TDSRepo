@@ -1,0 +1,20 @@
+name: CI Pipeline
+
+# Trigger on pushes to any branch and allow manual runs
+on:
+  push:
+    branches:
+      - "**"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: 23f2000673@ds.study.iitm.ac.in # <-- your email in the step name
+        run: |
+          echo "Hello, world!"
